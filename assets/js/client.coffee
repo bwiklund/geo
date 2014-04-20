@@ -9,3 +9,9 @@ angular.module 'app', []
       $http.get("/events/after/#{@nextEventId}").then (res) =>
         @nextEventId += res.data.length
         res.data
+
+
+.directive 'tickerMap', (Ticker) ->
+  scope:
+    ticker: '='
+    

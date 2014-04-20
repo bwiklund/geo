@@ -8,3 +8,11 @@ describe "ticker", ->
     $httpBackend.expectGET("/events/after/0").respond [{},{},{}]
     $httpBackend.flush()
     expect( ticker.nextEventId ).toBe 3
+
+
+describe "ticker element", ->
+  it "can be created", inject (Ticker,$compile,$rootScope) ->
+    scope = $rootScope.$new()
+    scope.ticker = new Ticker 0
+    el = $compile("<div ticker-map ticker='ticker'></div>")(scope)
+    expect( el.scope().ticker ).toBeDefined()
