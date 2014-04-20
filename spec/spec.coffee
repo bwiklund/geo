@@ -1,3 +1,1 @@
-describe "something", ->
-  it "works", ->
-    expect(true).toBe true
+beforeEach module 'app'
