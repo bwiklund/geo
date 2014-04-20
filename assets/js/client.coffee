@@ -1,1 +1,5 @@
-console.log "i work!"
+angular.module 'app', []
+
+
+.factory 'Ticker', ->
+  class Ticker

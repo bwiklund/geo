@@ -10,8 +10,8 @@ module.exports = (config) ->
       "spec/**/*.coffee": ["coffee"]
 
     files: [
-      "build/vendor.js"
-      "static/vendor/angular-mocks.js"
+      "bower_components/angular/angular.js"
+      "bower_components/angular-mocks/angular-mocks.js"
       "spec/**/*.coffee"
       "assets/js/**/*.coffee"
     ]
